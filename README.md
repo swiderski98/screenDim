@@ -25,14 +25,14 @@ screenDim solves this by detecting inactivity on each display and smoothly dimmi
 8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
 
 ### Tray Icon States (ON/OFF)
-![Tray icon (active)](assets/images/tray_on.png)
-![Tray icon (inactive)](assets/images/tray_off.png)
+![Tray icon (active)](assets/images/active.jpg)
+![Tray icon (inactive)](assets/images/inactive.jpg)
 
 ### Tray Menu
-![Tray right-click menu](assets/images/tray_menu.png)
+![Tray right-click menu](assets/images/right-click.jpg)
 
 ### Settings Window (exported to JSON)
-![Settings window](assets/images/settings_window.png)
+![Settings window](assets/images/settings.jpg)
 
 # TODOs:
 - Potential issue: May firstly check if <readLuminance> worked (try), and only if worked assign level_default !
