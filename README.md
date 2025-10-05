@@ -19,23 +19,23 @@ screenDim solves this by detecting inactivity on each display and smoothly dimmi
 2) Single-click on icon to toggle active/inactive
 3) Double-click to exit the program
 4) Right-click to display the settings (saved to a .json file)
-5) If active, program check mouse activity on every disaply
+5) If active, program checks mouse activity on every disaply
 6) If no mouse activity, then display is slowly being turned off (brightness -> low & pixels -> black)
 7) On mouse movement, the display goes back to original state
 8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
 
-### Tray Icon States (ON/OFF)
+### Tray Icon States (ON/OFF - left-click; exit - double-click)
 ![Tray icon (active)](assets/images/active.jpg)
 ![Tray icon (inactive)](assets/images/inactive.jpg)
 
-### Tray Menu
+### Tray Menu (right-click)
 ![Tray right-click menu](assets/images/right-click.jpg)
 
 ### Settings Window (exported to JSON)
 ![Settings window](assets/images/settings.jpg)
 
 # TODOs:
-- Potential issue: May firstly check if <readLuminance> worked (try), and only if worked assign level_default !
+- Potential issue: May firstly check if "readLuminance" worked (try), and only if worked assign level_default !
 - May use some power-saving mode for modern display (still keeping display detected by the operating system)
 - May apply semi-transparent background for older displays to achive gradient dimming
 - Full testing and adaptation to different OS (was written on Windows)
