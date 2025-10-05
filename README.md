@@ -16,17 +16,17 @@ In multi-display environment, gradually turns-off unused screens
 8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
 
 # AVAILABLE SETTINGS:
-CHECK_TIME = 1000   # mouse movement checking period in [ms]
-DIM_STEP = 1        # dimming step in [%]
-TIMEOUT = 180       # time to start dimming a display, in [s]
-DEFAULT_DIM = True  # True - program activated by default / False - program desactivated by default
-MIN_LEVEL = 2       # minimum brightness value allowed, in [%]
-FORCED_BRIGHT = 75  # brightness level to be forced manually
+- CHECK_TIME = 1000   # mouse movement checking period in [ms]
+- DIM_STEP = 1        # dimming step in [%]
+- TIMEOUT = 180       # time to start dimming a display, in [s]
+- DEFAULT_DIM = True  # True - program activated by default / False - program desactivated by default
+- MIN_LEVEL = 2       # minimum brightness value allowed, in [%]
+- FORCED_BRIGHT = 75  # brightness level to be forced manually
 
 # TODOs:
-1) Potential issue: May firstly check if <readLuminance> worked (try), and only if worked assign level_default !
-2) May use some power-saving mode for modern display (still keeping display detected by the operating system)
-3) May apply semi-transparent background for older displays to achive gradient dimming
-4) Full testing and adaptation to different OS (was written on Windows)
-5) Apply the dim-layer to all virtual desktops (not only the current one)
-6) Do not display the dim-layer window as a program in the bottom bar; do not disturb user when applying the dim-layer
+- Potential issue: May firstly check if <readLuminance> worked (try), and only if worked assign level_default !
+- May use some power-saving mode for modern display (still keeping display detected by the operating system)
+- May apply semi-transparent background for older displays to achive gradient dimming
+- Full testing and adaptation to different OS (was written on Windows)
+- Apply the dim-layer to all virtual desktops (not only the current one)
+- Do not display the dim-layer window as a program in the bottom bar; do not disturb user when applying the dim-layer
