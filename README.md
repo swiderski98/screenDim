@@ -10,20 +10,6 @@ Turning those displays off completely isn’t ideal either: Windows repositions 
 
 screenDim solves this by detecting inactivity on each display and smoothly dimming unused screens instead of turning them off. Once you move your mouse back to a dimmed screen, it brightens instantly and returns to normal.
 
-# HOW TO RUN:
-1) pip install monitorcontrol pyqt5 pyautogui wmi
-2) python screenDimmer.py
-
-# HOW IT WORKS:
-1) A tray icon appeears
-2) Single-click on icon to toggle active/inactive
-3) Double-click to exit the program
-4) Right-click to display the settings (saved to a .json file)
-5) If active, program checks mouse activity on every disaply
-6) If no mouse activity, then display is slowly being turned off (brightness -> low & pixels -> black)
-7) On mouse movement, the display goes back to original state
-8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
-
 ## 🖼️ Interface Overview
 
 ### 🧭 Tray Icon States  
@@ -38,7 +24,7 @@ Left-click to toggle **ON/OFF** · Double-click to **Exit**
 
 ### ⚙️ Tray Menu (Right-Click)
 <p align="center">
-  <img src="assets/images/right-clikc.jpg" width="400" alt="Tray menu" />
+  <img src="assets/images/right-click.jpg" width="400" alt="Tray menu" />
 </p>
 
 ---
@@ -50,6 +36,19 @@ Left-click to toggle **ON/OFF** · Double-click to **Exit**
 
 ---
 
+# HOW TO RUN:
+1) pip install monitorcontrol pyqt5 pyautogui wmi
+2) python screenDimmer.py
+
+# HOW IT WORKS:
+1) A tray icon appeears
+2) Single-click on icon to toggle active/inactive
+3) Double-click to exit the program
+4) Right-click to display the settings (saved to a .json file)
+5) If active, program checks mouse activity on every disaply
+6) If no mouse activity, then display is slowly being turned off (brightness -> low & pixels -> black)
+7) On mouse movement, the display goes back to original state
+8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
 
 # TODOs:
 - Potential issue: May firstly check if "readLuminance" worked (try), and only if worked assign level_default !
