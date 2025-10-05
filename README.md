@@ -9,14 +9,24 @@ In multi-display environment, gradually turns-off unused screens
 1) A tray icon appeears
 2) Single-click on icon to toggle active/inactive
 3) Double-click to exit the program
-4) If active, program check mouse activity on every disaply
-5) If no mouse activity, then display is slowly being turned off (brightness -> low & pixels -> black)
-6) On mouse movement, the display goes back to original value
-7) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
+4) Right-click to display the settings (saved to a .json file)
+5) If active, program check mouse activity on every disaply
+6) If no mouse activity, then display is slowly being turned off (brightness -> low & pixels -> black)
+7) On mouse movement, the display goes back to original state
+8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
+
+# AVAILABLE SETTINGS:
+CHECK_TIME = 1000   # mouse movement checking period in [ms]
+DIM_STEP = 1        # dimming step in [%]
+TIMEOUT = 180       # time to start dimming a display, in [s]
+DEFAULT_DIM = True  # True - program activated by default / False - program desactivated by default
+MIN_LEVEL = 2       # minimum brightness value allowed, in [%]
+FORCED_BRIGHT = 75  # brightness level to be forced manually
 
 # TODOs:
-1) Potential issue: May firstly check if <readLuminance> worked (try) and only if worked assign level_default !
+1) Potential issue: May firstly check if <readLuminance> worked (try), and only if worked assign level_default !
 2) May use some power-saving mode for modern display (still keeping display detected by the operating system)
 3) May apply semi-transparent background for older displays to achive gradient dimming
 4) Full testing and adaptation to different OS (was written on Windows)
-5) Add options to tray icon (to change the parameters on-the-fly)
+5) Apply the dim-layer to all virtual desktops (not only the current one)
+6) Do not display the dim-layer window as a program in the bottom bar; do not disturb user when applying the dim-layer
