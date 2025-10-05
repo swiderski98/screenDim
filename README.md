@@ -24,15 +24,32 @@ screenDim solves this by detecting inactivity on each display and smoothly dimmi
 7) On mouse movement, the display goes back to original state
 8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
 
-### Tray Icon States (ON/OFF - left-click; exit - double-click)
-![Tray icon (active)](assets/images/active.jpg)
-![Tray icon (inactive)](assets/images/inactive.jpg)
+## 🖼️ Interface Overview
 
-### Tray Menu (right-click)
-![Tray right-click menu](assets/images/right-click.jpg)
+### 🧭 Tray Icon States  
+Left-click to toggle **ON/OFF** · Double-click to **Exit**
+<p float="left" align="center">
+  <img src="assets/images/active.jpg" width="300" alt="Tray icon - ON" />
+  &nbsp;&nbsp;
+  <img src="assets/images/inactive.jpg" width="300" alt="Tray icon - OFF" />
+</p>
 
-### Settings Window (exported to JSON)
-![Settings window](assets/images/settings.jpg)
+---
+
+### ⚙️ Tray Menu (Right-Click)
+<p align="center">
+  <img src="assets/images/right-clikc.jpg" width="400" alt="Tray menu" />
+</p>
+
+---
+
+### 🪟 Settings Window (Exported to JSON)
+<p align="center">
+  <img src="assets/images/settings.jpg" width="380" alt="Settings window" />
+</p>
+
+---
+
 
 # TODOs:
 - Potential issue: May firstly check if "readLuminance" worked (try), and only if worked assign level_default !
