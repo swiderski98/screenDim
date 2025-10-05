@@ -13,10 +13,10 @@ screenDim solves this by detecting inactivity on each display and smoothly dimmi
 ## 🖼️ Interface Overview
 
 ### 🧭 Tray Icon States  
-Left-click to toggle **ON/OFF** · Double-click to **Exit**
+Left-click to toggle **ON/OFF** · Double-click to **Exit** (the round, red/green icon)
 <p float="left" align="center">
   <img src="assets/images/active.jpg" width="300" alt="Tray icon - ON" />
-  &nbsp;&nbsp;
+  <br/>
   <img src="assets/images/inactive.jpg" width="300" alt="Tray icon - OFF" />
 </p>
 
@@ -24,21 +24,30 @@ Left-click to toggle **ON/OFF** · Double-click to **Exit**
 
 ### ⚙️ Tray Menu (Right-Click)
 <p align="center">
-  <img src="assets/images/right-click.jpg" width="400" alt="Tray menu" />
+  <img src="assets/images/right-click.jpg" width="300" alt="Tray menu" />
 </p>
 
 ---
 
 ### 🪟 Settings Window (Exported to JSON)
 <p align="center">
-  <img src="assets/images/settings.jpg" width="380" alt="Settings window" />
+  <img src="assets/images/settings.jpg" width="400" alt="Settings window" />
 </p>
 
 ---
 
 # HOW TO RUN:
 1) pip install monitorcontrol pyqt5 pyautogui wmi
-2) python screenDimmer.py
+2) python screenDim.py
+
+## How to create a shortcut to run
+1) Create a text file (change the paths): start "" "C:\Users\YOU\AppData\Local\Programs\Python\Python313\pythonw.exe" "C:\Users\YOU\Downloads\screenDim.py"
+2) Save as .bat file and place on desktop for quick access
+
+## How to build an .exe
+1) pip install pyinstaller
+2) pyinstaller --noconsole --onefile .\screenDim.py
+
 
 # HOW IT WORKS:
 1) A tray icon appeears
