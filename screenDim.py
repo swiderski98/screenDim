@@ -7,7 +7,7 @@
 # 2) Single-click on icon to toggle active/inactive
 # 3) Double-click to exit the program
 # 4) Right-click to display the settings (saved to a .json file)
-# 5) If active, program check mouse activity on every disaply
+# 5) If active, program checks mouse activity on every display
 # 6) If no mouse activity, then display is slowly being turned off (brightness -> low & pixels -> black)
 # 7) On mouse movement, the display goes back to original state
 # 8) Idea is to avoid switching off displays completely so the operating system does not mess up the windows arrangement
@@ -19,6 +19,9 @@
 # 4) Full testing and adaptation to different OS (was written on Windows)
 # 5) Apply the dim-layer to all virtual desktops (not only the current one)
 # 6) Do not display the dim-layer window as a program in the bottom bar; do not disturb user when applying the dim-layer
+# 7) Identify the screens and allow for separate brightness setting, and memorize the screens and adapt program on-the-fly
+# 8) Allow to export and import settings for different screen configurations, and switch on-the-fly if configuration has changed
+
 
 CHECK_TIME = 1000   # mouse movement checking period in [ms]
 DIM_STEP = 1        # dimming step in [%]
@@ -247,7 +250,7 @@ class LaptopMonitorWrapper(BaseMonitorWrapper):
                 self.level_current = self.level_current - DIM_STEP
                 set_internal_brightness(self.level_current)
             else:
-                self.overlay.showFullScreen()
+                self.overlay.show()
                 self.dimmed_completely = 1
                 # TODO turn off completely or enter power saving mode
         self.dimmed = True
@@ -292,7 +295,7 @@ class ExternalMonitorWrapper(BaseMonitorWrapper):
                     except Exception as e:
                         print(f"Brightness control failed on external {self.index}: {e}")
             else:
-                self.overlay.showFullScreen()
+                self.overlay.show()
                 self.dimmed_completely = True
                 # TODO turn off completely or enter power saving mode
         self.dimmed = True
